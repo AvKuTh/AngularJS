@@ -1,0 +1,8 @@
+<h3>Firms</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let firm of firms" class="col-1-4" routerLink="/detail/{{firm.fid}}">
+    <div class="module firm">
+      <h4>{{firm.firmName}}</h4>
+    </div>
+  </a>
+</div>

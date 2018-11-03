@@ -1,0 +1,23 @@
+<h2>Firms</h2>
+<div>
+  <label>Firm name:
+    <input #name />
+  </label>
+  <button (click)="add(name.value); name.value=''">
+    add
+  </button>
+</div>
+
+
+<ul class="firms">
+  <li *ngFor="let firm of firms">
+     <a routerLink="/detail/{{firm.fid}}">
+    <span class="badge">{{firm.fid}}</span> {{firm.firmName}}
+     </a>
+     <br>
+          <button class="delete" title="delete firm"
+                  (click)="delete(firm)">x</button>
+          
+  </li>
+
+</ul>
